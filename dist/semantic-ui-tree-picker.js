@@ -73,13 +73,13 @@
         return widget.html(config.displayFormat(picked));
       });
       actionButtons.pickSearch.on('click', function(e) {
-        return $('.search-tab .node:not(.picked) .name').trigger('click');
+        return $('.search-tab .node:not(.picked) .name', modal).trigger('click');
       });
       actionButtons.unpickSearch.on('click', function(e) {
-        return $('.search-tab .node.picked .name').trigger('click');
+        return $('.search-tab .node.picked .name', modal).trigger('click');
       });
       actionButtons.unpickPicked.on('click', function(e) {
-        return $('.picked-tab .node.picked .name').trigger('click');
+        return $('.picked-tab .node.picked .name', modal).trigger('click');
       });
       $('.menu .tree', modal).on('click', function(e) {
         return showTree();
